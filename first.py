@@ -50,7 +50,7 @@ def predict(bed,bath,loc,size,facing,Type):
     input_data = np.array([[bed,bath,selected_location,
                             size,selected_direction,
                             selected_property]])
-    return model.predict(input_data)
+    return model.predict(input_data)[0]
 
 if __name__ == "__main__":
     st.header("House Price Prediction")
