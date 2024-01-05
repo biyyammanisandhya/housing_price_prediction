@@ -19,7 +19,7 @@ def home():
     return render_template('index.html')
 
 # Define the route for the prediction page
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     # Get input values from user
     bed = int(request.form['bedrooms'])
